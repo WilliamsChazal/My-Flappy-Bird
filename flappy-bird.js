@@ -1,7 +1,7 @@
 const block = document.getElementById('block');
 const hole =document.getElementById('hole');
 const personnage =document.getElementById('personnage');
-const jumping = 0;
+let jumping = 0;
 
 /* hole.addEventListener('animationiteration', () => {
     const random = -(( Math.random()*300)+150);
@@ -25,7 +25,7 @@ function jump(){
     let jumpCount = 0;
     const jumpInterval = setInterval(function(){
         const personnageTop = parseInt(window.getComputedStyle(personnage).getPropertyValue("top"));
-        if((personnage>6)&&(counter<15)){
+        if(personnageTop>6){
              personnage.style.top = (personnageTop-5)+"px";
          }
         if( jumpCount>20){
